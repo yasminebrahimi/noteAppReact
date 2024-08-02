@@ -1,9 +1,8 @@
-import { useState } from "react";
-
 
 function AddNewNote() {
     const [title, setTitle] = useState(""); 
     const [description, setDescription] = useState(""); 
+   
 
      const handleSubmit = (e) => { 
         e.preventDefault(); 
@@ -15,8 +14,9 @@ function AddNewNote() {
             createdAt: new Date().toISOString(),
         }
 
-        setTitle("")
-        setDescription("")
+        setTitle(""); 
+        setDescription(""); 
+        setNotes((prevNotes) => [... prevNotes, newNote]); 
      }; 
 
      const handleChange = (e) => {
