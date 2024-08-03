@@ -1,11 +1,13 @@
 
-function AddNewNote() {
+function AddNewNote(onAddNote) {
     const [title, setTitle] = useState(""); 
     const [description, setDescription] = useState(""); 
    
 
      const handleSubmit = (e) => { 
         e.preventDefault(); 
+        if(!title || !description) return null; 
+
         const newNote = {
             title, 
             description, 
@@ -13,14 +15,9 @@ function AddNewNote() {
             completed: false,
             createdAt: new Date().toISOString(),
         }
-
+        onAddNote(newNote); 
         setTitle(""); 
-        setDescription(""); 
-        setNotes((prevNotes) => [... prevNotes, newNote]); 
-     }; 
-
-     const handleChange = (e) => {
-        setTitle(e.target.value); 
+        setDescription("");
      }; 
 
   return (
