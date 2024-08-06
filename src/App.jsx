@@ -1,10 +1,13 @@
 import "./App.css";
 import AddNewNote from "./components/AddNewNote";
+import NoteHeader from "./components/NoteHeader";
+import NoteStatus from "./components/NoteStatus";
 
 
 
 function App() {
   const [notes, setNotes] = useState([]); 
+  const [sortBy, setSortBy] = useState("latest")
 
   const handleAddNote = (newNotes) => {
     setNotes((prevNotes)  => [...prevNotes, newNote]); 
@@ -28,17 +31,21 @@ function App() {
   setNotes(prevNotes => notes.map((note) => 
     note.id === noteId ? {...note,completed:!note.completed}:note 
 ));
-  }; 
+  };  
+
 
   
   return (
   <di className= "container">
+    <NoteHeader note={notes} sortBy={sortBy} onSort={e => setSortBy(e.target.value)}/>
     <di className="note-header">note header</di>
     <di className="note-app">
       <AddNewNote onAddNote={handleAddNote}/>
       <div className="note-container">
-        <NoteList 
+        <NoteStatus notes={notes}/>
+        <NoteList   
         notes={notes} 
+        sortBy={sortBy}
         onDelete={handleDeleteNote} 
         onComplete={handleCompleteNote}/>
         </div> 
