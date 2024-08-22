@@ -3,6 +3,11 @@
 ## Description
 This is a straightforward Note-taking application built with React. It allows users to create, manage, and view their notes in an organized manner. The app includes functionalities for adding new notes, sorting them, and viewing their status.
 
+## Skills
+- React.js
+- JavaScript
+
+
 ## Features
 - **Add New Notes 📝**: Create notes by specifying a title and description. Notes are timestamped upon creation.
 - **Sort Notes 🔄**: Organize notes by their creation date (latest or earliest) or by their completion status.
@@ -21,11 +26,3 @@ This is a straightforward Note-taking application built with React. It allows us
 ## Preview
 Here is a screenshot of the application in action:
 ![App Screenshot](assets/images/screenshot.png)
-
-## Skills
-- React.js
-- JavaScript
-
-## Installation
-1. Clone the repository:
-   https://github.com/yasminebrahimi/noteAppReact
