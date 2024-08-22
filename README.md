@@ -7,6 +7,9 @@ This is a straightforward Note-taking application built with React. It allows us
 - React.js
 - JavaScript
 
+## Preview
+Here is a screenshot of the application in action:
+![App Screenshot](src/assets/images/noteAppPic.png)
 
 ## Features
 - **Add New Notes 📝**: Create notes by specifying a title and description. Notes are timestamped upon creation.
@@ -23,6 +26,3 @@ This is a straightforward Note-taking application built with React. It allows us
 - **NoteItem.jsx**: A sub-component within `NoteList` that represents each individual note, showing its title, description, and creation date, along with options to mark it as completed or delete it.
 - **NoteStatus.jsx**: Provides a summary of notes, displaying the total number of notes, the count of completed notes, and the number of open notes.
 
-## Preview
-Here is a screenshot of the application in action:
-![App Screenshot](src/assets/images/noteAppPic.png)
