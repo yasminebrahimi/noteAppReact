@@ -25,4 +25,4 @@ This is a straightforward Note-taking application built with React. It allows us
 
 ## Preview
 Here is a screenshot of the application in action:
-![App Screenshot](assets/images/screenshot.png)
+![App Screenshot](src/assets/images/noteAppPic.png)
